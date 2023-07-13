@@ -30,7 +30,12 @@ Input: 0 Output: 0
 class Solution:    
     def digitdecrypt(self, num):
         if num > 10:
-            return self.digitdecrypt(num%10 + int(num/10) + int(num/100))
+            s = str(num)
+            counter = 0
+            for i in s:
+                counter += int(i)
+            
+            return self.digitdecrypt(counter)
             
         else:
             return num
