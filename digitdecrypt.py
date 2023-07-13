@@ -42,6 +42,4 @@ def main():
     print(ans)
     
 if __name__ == "__main__":
-    #main()
-    sol = Solution()
-    print(sol.digitdecrypt(48))
+    main()
