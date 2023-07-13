@@ -29,17 +29,7 @@ Input: 0 Output: 0
 
 class Solution:    
     def digitdecrypt(self, num):
-        if num > 10:
-            s = str(num)
-            counter = 0
-            for i in s:
-                counter += int(i)
-            
-            return self.digitdecrypt(counter)
-            
-        else:
-            return num
-            
+        return (self.digitdecrypt(sum([int(i) for i in str(num)])) if num > 10 else num)
             #TODO: Write code below to returnn an int with the solution to the prompt.
  
 def main():
@@ -52,4 +42,6 @@ def main():
     print(ans)
     
 if __name__ == "__main__":
-    main()
+    #main()
+    sol = Solution()
+    print(sol.digitdecrypt(48))
